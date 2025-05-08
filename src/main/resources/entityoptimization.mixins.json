@@ -4,13 +4,13 @@
   "compatibilityLevel": "JAVA_17",
   "package": "com.piglinmine.entityoptimization.mixin",
   "mixins": [
+    "EntityMixin",
+    "LivingEntityMixin",
+    "TntMixin"
   ],
   "client": [
   ],
   "server": [
-    "EntityMixin",
-    "LivingEntityMixin",
-    "TntMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -1,14 +1,14 @@
 package com.piglinmine.entityoptimization.server.events;
 
 import com.piglinmine.entityoptimization.EntityOptimizationHelper;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.tick.ServerTickEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class ServerTickEventHandler {
 
     @SubscribeEvent
-    public void onPreServerTick(ServerTickEvent.Pre event) {
+    public void onPreServerTick(TickEvent.ServerTickEvent event) {
         EntityOptimizationHelper.tickCounter++;
 
         if (EntityOptimizationHelper.tickCounter > 30 * 20) {

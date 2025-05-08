@@ -1,16 +1,16 @@
 package com.piglinmine.entityoptimization.config;
 
-import net.neoforged.neoforge.common.ModConfigSpec;
+import net.minecraftforge.common.ForgeConfigSpec;
 
 public class EntityOptimizationConfig {
 
     public static final General general;
-    public static final ModConfigSpec COMMON_CONFIG;
-    private static final ModConfigSpec.Builder COMMON_BUILDER;
+    public static final ForgeConfigSpec COMMON_CONFIG;
+    private static final ForgeConfigSpec.Builder COMMON_BUILDER;
 
     // Don't judge me! It's because of auto formatting moving the order around!
     static {
-        COMMON_BUILDER = new ModConfigSpec.Builder();
+        COMMON_BUILDER = new ForgeConfigSpec.Builder();
 
         general = new General();
 
@@ -19,8 +19,8 @@ public class EntityOptimizationConfig {
 
     public static class General {
 
-        public final ModConfigSpec.ConfigValue<Integer> maxEntitiesOnServer;
-        public final ModConfigSpec.ConfigValue<Boolean> enabledEntityKilling;
+        public final ForgeConfigSpec.ConfigValue<Integer> maxEntitiesOnServer;
+        public final ForgeConfigSpec.ConfigValue<Boolean> enabledEntityKilling;
 
         General() {
             COMMON_BUILDER.push("general");
